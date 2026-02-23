@@ -7,21 +7,21 @@
 
     <fragment
         android:id="@+id/nav_dashboard"
-        android:name="com.example.coinbycoin.DashboardFragment"
+        android:name="com.example.MrFinancesApp.DashboardFragment"
         android:label="@string/dashboard"
         tools:layout="@layout/fragment_dashboard">
     </fragment>
 
     <fragment
         android:id="@+id/nav_perfil"
-        android:name="com.example.coinbycoin.Perfil"
+        android:name="com.example.MrFinancesApp.Perfil"
         android:label="@string/perfil"
         tools:layout="@layout/fragment_perfil">
     </fragment>
 
     <fragment
         android:id="@+id/nav_reporte"
-        android:name="com.example.coinbycoin.Reporte"
+        android:name="com.example.MrFinancesApp.Reporte"
         android:label="@string/reporte"
         tools:layout="@layout/fragment_reporte" >
     </fragment>
@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/nav_ingresos"
-        android:name="com.example.coinbycoin.Ingresos"
+        android:name="com.example.MrFinancesApp.Ingresos"
         android:label="@string/ingresos"
         tools:layout="@layout/fragment_ingresos" >
     </fragment>
