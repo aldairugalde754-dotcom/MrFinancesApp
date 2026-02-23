@@ -8,20 +8,18 @@ config:
   validation: true
   warningsAsErrors: true
 
-# REGLAS DE DOCUMENTACIÓN Y COMENTARIOS
 comments:
   active: true
-  # SQAP: Documentación obligatoria en API pública (KDoc)
+
   UndocumentedPublicClass:
     active: true
   UndocumentedPublicFunction:
     active: true
     excludes: ["**/*Test.kt", "**/test/**", "**/androidTest/**"]
 
-# MÉTRICAS DE MANTENIBILIDAD (MVVM)
 complexity:
   active: true
-  # Evitar ViewModels o Repositorios excesivamente complejos
+
   CyclomaticComplexMethod:
     active: true
     threshold: 15
@@ -30,28 +28,24 @@ complexity:
     threshold: 60
   LargeClass:
     active: true
-    threshold: 300 # Límite para evitar "God Objects"
+    threshold: 300
   TooManyFunctions:
     active: true
     thresholdInClasses: 15
 
-# ESTÁNDARES DE NOMBRADO
 naming:
   active: true
   PackageNaming:
     active: true
     packagePattern: '[a-z]+(\.[a-z][a-z0-9]*)*'
-  # Naming estricto para LiveData/StateFlow (is..., has..., etc)
+
   BooleanPropertyNaming:
     active: true
     allowedPattern: '^(is|has|should|can|must)[A-Z].*'
 
-# REGLAS DE ARQUITECTURA MVVM (CRÍTICO)
 style:
   active: true
 
-  # Calidad de entregas: Prohibido dejar notas temporales
-  # (Detekt 1.23.x: ForbiddenComment está en "style" y usa "comments" como regex)
   ForbiddenComment:
     active: true
     comments:
@@ -59,7 +53,6 @@ style:
       - "FIXME:.*"
       - "STOPSHIP:.*"
 
-  # MVVM: Los ViewModels NO deben conocer la Vista (Context, View, Resources)
   ForbiddenImport:
     active: true
     imports:
@@ -73,37 +66,33 @@ style:
       - "**/*Activity.kt"
       - "**/*Adapter.kt"
 
-  # Fomentar la inmutabilidad en el State del ViewModel
   VarCouldBeVal:
     active: true
   DataClassShouldBeImmutable:
     active: true
 
-  # Evitar lógica oculta en funciones de una sola línea
   ExpressionBodySyntax:
     active: true
 
-# REGLAS PARA CAPA DE DATOS Y ERRORES
 potential-bugs:
   active: true
-  # Evitar que colecciones mutables se expongan desde el Repositorio
+
   DoubleMutabilityForCollection:
     active: true
-  # Lateinit permitido solo donde el ciclo de vida de Android lo exige
+
   LateinitUsage:
     active: true
     excludes: ["**/ui/**", "**/*Fragment.kt", "**/*Activity.kt"]
 
 exceptions:
   active: true
-  # Obligar a un manejo de errores específico en el ViewModel/UseCases
+
   TooGenericExceptionCaught:
     active: true
     exceptionNames: ["Error", "Exception", "Throwable"]
   SwallowedException:
     active: true
 
-# FORMATO FINAL (requiere detekt-formatting)
 formatting:
   active: true
   Indentation:
