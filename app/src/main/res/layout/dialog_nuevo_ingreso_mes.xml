@@ -1,57 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TxtVerdeMedianoItalic"
-        android:text="@string/nuevo_ingreso"
-        android:gravity="center"
-        />
+        android:padding="16dp"
+        android:background="@drawable/mf_bg_card">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextCantidad"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:hint="@string/cantidad"
-        android:inputType="numberDecimal"
-        android:padding="4dp"
-        style="@style/EstiloEditText"
-        android:background="@drawable/bg_btn_borde_amarillo"
-        android:layout_margin="8dp"/>
+        <TextView
+            android:id="@+id/mfTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ingresos_mens"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/negro"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextFecha"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:hint="@string/fecha"
-        android:focusable="false"
-        android:clickable="true"
-        android:padding="4dp"
-        style="@style/EstiloEditText"
-        android:background="@drawable/bg_btn_borde_amarillo"
-        android:layout_margin="8dp"/>
+        <EditText
+            android:id="@+id/editTextCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/cantidad"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/mfTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <EditText
+            android:id="@+id/editTextFecha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/fecha"
+            app:layout_constraintTop_toBottomOf="@id/editTextCantidad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:hint="@string/descripcion"
-        android:padding="4dp"
-        style="@style/EstiloEditText"
-        android:background="@drawable/bg_btn_borde_amarillo"
-        android:layout_margin="8dp"/>
+        <EditText
+            android:id="@+id/editTextDescripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/descripcion"
+            app:layout_constraintTop_toBottomOf="@id/editTextFecha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/txtAdvertencia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TxtVerdePequenoItalic"
-        android:text="el ingreso se contara a partir de la fecha especificada y se tendra en cuenta cada mes."/>
+        <TextView
+            android:id="@+id/txtAdvertencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/Gastos_Varios"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/editTextDescripcion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

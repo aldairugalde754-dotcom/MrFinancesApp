@@ -1,57 +1,79 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:fillViewport="true">
 
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtinputConActual"
-            style="@style/EstiloEditText"
-            android:background="@drawable/bg_btn_borde_amarillo"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:padding="4dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:hint="@string/contrase_a_actual"
-            android:inputType="textPassword"/>
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtinputNuevaCon"
-            style="@style/EstiloEditText"
-            android:background="@drawable/bg_btn_borde_amarillo"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:padding="4dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:hint="@string/nueva_contrase_a"
-            android:inputType="textPassword"/>
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtinputConfCon"
-            style="@style/EstiloEditText"
-            android:background="@drawable/bg_btn_borde_amarillo"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:padding="4dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:hint="@string/confirmar_nueva_contrase_a"
-            android:inputType="textPassword"/>
-
-
-    <TextView
-        android:id="@+id/tvError"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/verde_oscuro"
-        android:visibility="gone"
-        android:layout_marginTop="8dp"/>
+        android:padding="16dp"
+        android:background="@drawable/mf_bg_card">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/mfTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cambiar_con"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/negro"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/txtinputConActual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/contrase_a_actual"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/mfTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/txtinputNuevaCon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/nueva_contrase_a"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/txtinputConActual"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/txtinputConfCon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/confirmar_nueva_contrase_a"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/txtinputNuevaCon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/las_contrase_as_no_coinciden"
+            android:textColor="@color/Gastos_Varios"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/txtinputConfCon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

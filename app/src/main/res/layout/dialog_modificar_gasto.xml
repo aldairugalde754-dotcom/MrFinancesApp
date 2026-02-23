@@ -1,72 +1,86 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/titulo"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TxtVerdeMedianoItalic"
-        android:text="@string/modificar_gasto"
-        android:gravity="center"
-        />
+        android:padding="16dp"
+        android:background="@drawable/mf_bg_card">
 
-    <Spinner
-        android:id="@+id/spinnerCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:prompt="@string/selec_cat"
-        android:entries="@array/categorias"
-        android:background="@drawable/bg_spinner"
-        android:dropDownWidth="match_parent"
-        android:layout_margin="8dp"/>
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/modificar_gasto"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/negro"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <Spinner
+            android:id="@+id/spinnerCategoria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/titulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextCantidad"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:hint="@string/cantidad"
-        android:inputType="numberDecimal"
-        android:padding="4dp"
-        style="@style/EstiloEditText"
-        android:background="@drawable/bg_btn_borde_amarillo"
-        android:layout_margin="8dp"/>
+        <EditText
+            android:id="@+id/editTextCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/cantidad"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/spinnerCategoria"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextFecha"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:hint="@string/fecha"
-        android:focusable="false"
-        android:clickable="true"
-        android:padding="4dp"
-        style="@style/EstiloEditText"
-        android:background="@drawable/bg_btn_borde_amarillo"
-        android:layout_margin="8dp"/>
+        <EditText
+            android:id="@+id/editTextFecha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/fecha"
+            app:layout_constraintTop_toBottomOf="@id/editTextCantidad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <EditText
+            android:id="@+id/editTextDescripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mf_bg_input"
+            android:padding="12dp"
+            android:hint="@string/descripcion"
+            app:layout_constraintTop_toBottomOf="@id/editTextFecha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:hint="@string/descripcion"
-        android:padding="4dp"
-        style="@style/EstiloEditText"
-        android:background="@drawable/bg_btn_borde_amarillo"
-        android:layout_margin="8dp"/>
+        <Button
+            android:id="@+id/btnEliminarGasto"
+            style="@style/EstiloBordeAmarillo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/eliminar_gasto"
+            app:layout_constraintTop_toBottomOf="@id/editTextDescripcion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:layout_marginTop="8dp"
-        android:id="@+id/btnEliminarGasto"
-        style="@style/EstiloBordeVerde"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:text="@string/eliminar_gasto1"
-        android:textSize="20sp"/>
-
-
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

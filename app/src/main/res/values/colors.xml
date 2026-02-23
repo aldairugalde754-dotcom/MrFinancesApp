@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="verde_claro">#87EE2B</color>
-    <color name="verde_oscuro">#76EE2B</color>
-    <color name="amarillo_claro">#FFF84B</color>
-    <color name="amarillo_oscuro">#FDCF2C</color>
-    <color name="gris">#DEDEDE</color>
-    <color name="texto1">#797979</color>
-    <color name="texto2">#C0C0C0</color>
-    <color name="negro">#000000</color>
+    <!-- Nuevo look (azul/gris tipo dashboard moderno) -->
+    <color name="verde_claro">#2D6CDF</color>      <!-- antes verde, ahora azul -->
+    <color name="verde_oscuro">#1E2A44</color>     <!-- azul oscuro -->
+    <color name="amarillo_claro">#E8EEF7</color>   <!-- gris claro -->
+    <color name="amarillo_oscuro">#F59E0B</color>  <!-- acento naranja -->
+    <color name="gris">#E2E8F0</color>
+    <color name="texto1">#0F172A</color>           <!-- texto principal -->
+    <color name="texto2">#CBD5E1</color>           <!-- bordes/divisor -->
+    <color name="negro">#0F172A</color>
     <color name="blanco">#FFFFFF</color>
-    <color name="disponible">#87EE2B</color>
-    <color name="Gastos_Varios">#F66B6B</color>
-    <color name="Alimentos">#FF66C1</color>
-    <color name="Transporte">#339AF0</color>
-    <color name="Servicios">#EEB62B</color>
-    <color name="Mercado">#FD8435</color>
+
+    <!-- Mantengo tus colores de categorías -->
+    <color name="disponible">#22C55E</color>
+    <color name="Gastos_Varios">#EF4444</color>
+    <color name="Alimentos">#F97316</color>
+    <color name="Transporte">#3B82F6</color>
+    <color name="Servicios">#F59E0B</color>
+    <color name="Mercado">#10B981</color>
+
+    <!-- ===== MrFinances UI tokens (necesarios para bg_*.xml) ===== -->
+    <color name="mf_bg">#F3F6FB</color>
+    <color name="mf_surface">#FFFFFF</color>
+    <color name="mf_text">#0F172A</color>
+    <color name="mf_text_muted">#64748B</color>
+    <color name="mf_divider">#E2E8F0</color>
+
+    <color name="mf_primary">#1E2A44</color>
+    <color name="mf_primary_2">#243657</color>
+    <color name="mf_on_primary">#FFFFFF</color>
+
+    <color name="mf_blue">#2D6CDF</color>
+    <color name="mf_orange">#F59E0B</color>
+    <color name="mf_green">#22C55E</color>
+    <color name="mf_red">#EF4444</color>
+
+    <color name="mf_progress_track">#E8EEF7</color>
 </resources>

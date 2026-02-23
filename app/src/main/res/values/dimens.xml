@@ -5,4 +5,9 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- ===== MrFinances dimens (necesarios para bg_*.xml) ===== -->
+    <dimen name="mf_radius_card">18dp</dimen>
+    <dimen name="mf_radius_input">14dp</dimen>
+    <dimen name="mf_pad_card">16dp</dimen>
 </resources>

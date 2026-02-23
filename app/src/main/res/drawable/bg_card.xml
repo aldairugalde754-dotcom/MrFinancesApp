@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/mf_surface"/>
+    <corners android:radius="@dimen/mf_radius_card"/>
+    <padding
+        android:left="@dimen/mf_pad_card"
+        android:top="@dimen/mf_pad_card"
+        android:right="@dimen/mf_pad_card"
+        android:bottom="@dimen/mf_pad_card"/>
+</shape>

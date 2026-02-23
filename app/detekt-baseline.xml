@@ -1,0 +1,580 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ArgumentListWrapping:DAO.kt$GastoDao$("SELECT (SELECT SUM(valor) FROM Ingreso WHERE idUsuario = :usuarioId)-(SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId)")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$GastoDao$("SELECT * FROM Gasto WHERE idUsuario = :idUsuario AND DATE(fecha) BETWEEN DATE(:fechaInf) AND DATE(:fechaSup)")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$GastoDao$("SELECT * FROM Gasto WHERE idUsuario = :usuarioId AND categoria = :categoria AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$GastoDao$("SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$GastoDao$("SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId AND categoria = :categoria AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$GastoDao$("UPDATE gasto SET categoria = :categoria, valor = :valor, descripcion = :descripcion, fecha = :fecha WHERE id == :id")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$IngresoDao$("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now') AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now') AND tipo = 'casual'")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$IngresoDao$("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now') AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now') AND tipo = 'mensual'")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$IngresoDao$("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND tipo = 'casual' AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$IngresoDao$("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND tipo = 'mensual' AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = :anio AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = :mes")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$IngresoDao$("SELECT SUM(valor) FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')")</ID>
+    <ID>ArgumentListWrapping:DAO.kt$UsuarioDao$("UPDATE Usuario SET usuario = :usuario, nombres = :nombres, apellidos = :apellidos, documento = :documento, correo = :email, telefono = :numeroTel WHERE id = :usuarioId")</ID>
+    <ID>ArgumentListWrapping:DashboardFragment.kt$DashboardFragment$(0.8f)</ID>
+    <ID>ArgumentListWrapping:DashboardFragment.kt$DashboardFragment$(requireContext(), "La cantidad ingresada no es válida", Toast.LENGTH_SHORT)</ID>
+    <ID>ArgumentListWrapping:DashboardFragment.kt$DashboardFragment$(requireContext(), "Por favor complete todos los campos", Toast.LENGTH_SHORT)</ID>
+    <ID>ArgumentListWrapping:Entidades.kt$Gasto$(entity = Usuario::class, parentColumns = ["id"], childColumns = ["idUsuario"], onDelete = CASCADE)</ID>
+    <ID>ArgumentListWrapping:Entidades.kt$Gasto$(foreignKeys = [ForeignKey(entity = Usuario::class, parentColumns = ["id"], childColumns = ["idUsuario"], onDelete = CASCADE)])</ID>
+    <ID>ArgumentListWrapping:Entidades.kt$Ingreso$(entity = Usuario::class, parentColumns = ["id"], childColumns = ["idUsuario"], onDelete = CASCADE)</ID>
+    <ID>ArgumentListWrapping:Entidades.kt$Ingreso$(foreignKeys = [ForeignKey(entity = Usuario::class, parentColumns = ["id"], childColumns = ["idUsuario"], onDelete = CASCADE)])</ID>
+    <ID>ArgumentListWrapping:GastoRepository.kt$GastoRepository$(usuarioId, categoria)</ID>
+    <ID>ArgumentListWrapping:Ingresos.kt$Ingresos$( descripcion = descripcion, valor = cantidad.toDouble(), fecha = fecha, idUsuario = usuarioId, tipo = "mensual")</ID>
+    <ID>ArgumentListWrapping:Ingresos.kt$Ingresos$("FragmentIngresos", "creando ingreso mensual ${ingreso.descripcion} mes $monthString/$yearString")</ID>
+    <ID>ArgumentListWrapping:Ingresos.kt$Ingresos$(requireContext(), "Por favor, llene todos los campos", Toast.LENGTH_SHORT)</ID>
+    <ID>ArgumentListWrapping:Ingresos.kt$Ingresos$(usuarioId, yearString, monthString)</ID>
+    <ID>ArgumentListWrapping:Ingresos.kt$Ingresos$(viewLifecycleOwner)</ID>
+    <ID>ArgumentListWrapping:Perfil.kt$Perfil$( requireContext(), "Requerimientos de contraseña no cumplidos", Toast.LENGTH_LONG)</ID>
+    <ID>ArgumentListWrapping:Perfil.kt$Perfil$("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%^&amp;*()_+\\-=\\[\\]{};':\"\\\\|,.&lt;&gt;/?]).{8,}\$")</ID>
+    <ID>ArgumentListWrapping:Reporte.kt$Reporte$(usuarioId, fechaInfFormateada, fechaSupFormateada)</ID>
+    <ID>ArgumentListWrapping:Reporte.kt$Reporte$(viewLifecycleOwner)</ID>
+    <ID>ArgumentListWrapping:UsuarioRepository.kt$UsuarioRepository$(usuarioId= usuarioId, usuario=usuario, nombres=nombres, apellidos=apellidos, documento=documento, email=email, numeroTel=numeroTel)</ID>
+    <ID>ArgumentListWrapping:UsuarioViewModel.kt$UsuarioViewModel$( usuarioId, usuario, nombres, apellidos, documento, email, numeroTel )</ID>
+    <ID>BlockCommentInitialStarAlignment:Theme.kt$/* Other default colors to override background = Color(0xFFFFFBFE), surface = Color(0xFFFFFBFE), onPrimary = Color.White, onSecondary = Color.White, onTertiary = Color.White, onBackground = Color(0xFF1C1B1F), onSurface = Color(0xFF1C1B1F), */</ID>
+    <ID>BlockCommentInitialStarAlignment:Type.kt$/* Other default text styles to override titleLarge = TextStyle( fontFamily = FontFamily.Default, fontWeight = FontWeight.Normal, fontSize = 22.sp, lineHeight = 28.sp, letterSpacing = 0.sp ), labelSmall = TextStyle( fontFamily = FontFamily.Default, fontWeight = FontWeight.Medium, fontSize = 11.sp, lineHeight = 16.sp, letterSpacing = 0.5.sp ) */</ID>
+    <ID>ComplexCondition:DashboardFragment.kt$DashboardFragment$categoria.isNotBlank() &amp;&amp; cantidad.isNotBlank() &amp;&amp; fechaOriginal.isNotBlank() &amp;&amp; descripcion.isNotBlank()</ID>
+    <ID>ComplexCondition:Registro.kt$Registro$nombres.isEmpty() || apellidos.isEmpty() || usuario.isEmpty() || contrasena.isEmpty()</ID>
+    <ID>CyclomaticComplexMethod:Perfil.kt$Perfil$override fun onViewCreated(view: View, savedInstanceState: Bundle?)</ID>
+    <ID>CyclomaticComplexMethod:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun cargarGraficoLineasAn(chartView: LineChartView, datosPorCategoria: Map&lt;String, List&lt;Pair&lt;String, Double&gt;&gt;&gt;)</ID>
+    <ID>CyclomaticComplexMethod:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun cargarGraficoLineasSem(chartView: LineChartView, datosPorCategoria: Map&lt;String, List&lt;Pair&lt;String, Double&gt;&gt;&gt;)</ID>
+    <ID>ExpressionBodySyntax:GastoRepository.kt$GastoRepository$return gastoDao.getGastosPorFechas(idUsuario,fechaInf,fechaSup)</ID>
+    <ID>ExpressionBodySyntax:GastosViewModel.kt$GastosViewModel$return repository.getDisponible(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:GastosViewModel.kt$GastosViewModel$return repository.getGastosMesCategoria(usuarioId, categoria)</ID>
+    <ID>ExpressionBodySyntax:GastosViewModel.kt$GastosViewModel$return repository.getGastosPorFechas(idUsuario,fechaInf,fechaSup)</ID>
+    <ID>ExpressionBodySyntax:GastosViewModel.kt$GastosViewModel$return repository.getValorGastosMes(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:GastosViewModel.kt$GastosViewModel$return repository.getValorGastosMesCategoria(usuarioId, categoria)</ID>
+    <ID>ExpressionBodySyntax:IngresoRepository.kt$IngresoRepository$return ingresoDao.getIngCasDeEsteMes(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:IngresoRepository.kt$IngresoRepository$return ingresoDao.getIngMesDeEsteMes(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:IngresoRepository.kt$IngresoRepository$return ingresoDao.getIngTotalDeEsteMes(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:IngresoRepository.kt$IngresoRepository$return ingresoDao.getIngresosMensuales(usuarioId,anio,mes)</ID>
+    <ID>ExpressionBodySyntax:IngresoRepository.kt$IngresoRepository$return ingresoDao.verificacion(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:IngresoViewModel.kt$IngresoViewModel$return repository.getAllIngresos()</ID>
+    <ID>ExpressionBodySyntax:IngresoViewModel.kt$IngresoViewModel$return repository.getIngCasDeEsteMes(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:IngresoViewModel.kt$IngresoViewModel$return repository.getIngMesDeEsteMes(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:IngresoViewModel.kt$IngresoViewModel$return repository.getIngTotalDeEsteMes(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:IngresoViewModel.kt$IngresoViewModel$return repository.getIngresosMensuales(usuarioId, anio, mes)</ID>
+    <ID>ExpressionBodySyntax:IngresoViewModel.kt$IngresoViewModel$return repository.verificacion(usuarioId)</ID>
+    <ID>ExpressionBodySyntax:SharedViewModel.kt$SharedViewModel$return idUsuario</ID>
+    <ID>ExpressionBodySyntax:UsuarioRepository.kt$UsuarioRepository$return usuarioDao.getUltimoUsuarioId()</ID>
+    <ID>ExpressionBodySyntax:UsuarioRepository.kt$UsuarioRepository$return usuarioDao.getUsuarioPorId(id)</ID>
+    <ID>ExpressionBodySyntax:UsuarioRepository.kt$UsuarioRepository$return usuarioDao.getUsuarioPorUsuario(nombreUsuario)</ID>
+    <ID>ExpressionBodySyntax:UsuarioViewModel.kt$UsuarioViewModel$return repository.getUltimoUsuarioId()</ID>
+    <ID>Filename:customSpinnerAdapter.kt$com.example.MrFinancesApp.ui.theme.customSpinnerAdapter.kt</ID>
+    <ID>FinalNewline:Color.kt$com.example.MrFinancesApp.ui.theme.Color.kt</ID>
+    <ID>FinalNewline:DashboardFragment.kt$com.example.MrFinancesApp.DashboardFragment.kt</ID>
+    <ID>FinalNewline:ExampleUnitTest.kt$com.example.MrFinancesApp.ExampleUnitTest.kt</ID>
+    <ID>FinalNewline:GastosViewModel.kt$com.example.MrFinancesApp.GastosViewModel.kt</ID>
+    <ID>FinalNewline:IngresoRepository.kt$com.example.MrFinancesApp.IngresoRepository.kt</ID>
+    <ID>FinalNewline:IngresoViewModel.kt$com.example.MrFinancesApp.IngresoViewModel.kt</ID>
+    <ID>FinalNewline:Login.kt$com.example.MrFinancesApp.Login.kt</ID>
+    <ID>FinalNewline:OnItemClickListener.kt$com.example.MrFinancesApp.OnItemClickListener.kt</ID>
+    <ID>FinalNewline:Perfil.kt$com.example.MrFinancesApp.Perfil.kt</ID>
+    <ID>FinalNewline:Reporte.kt$com.example.MrFinancesApp.Reporte.kt</ID>
+    <ID>FinalNewline:SharedViewModel.kt$com.example.MrFinancesApp.SharedViewModel.kt</ID>
+    <ID>FinalNewline:Theme.kt$com.example.MrFinancesApp.ui.theme.Theme.kt</ID>
+    <ID>FinalNewline:Type.kt$com.example.MrFinancesApp.ui.theme.Type.kt</ID>
+    <ID>FinalNewline:UsuarioViewModel.kt$com.example.MrFinancesApp.UsuarioViewModel.kt</ID>
+    <ID>ForbiddenImport:AppDatabase.kt$import android.content.Context</ID>
+    <ID>ForbiddenImport:Dashboard.kt$import android.widget.TextView</ID>
+    <ID>ForbiddenImport:Ingresos.kt$import android.view.View</ID>
+    <ID>ForbiddenImport:Ingresos.kt$import android.widget.Button</ID>
+    <ID>ForbiddenImport:Ingresos.kt$import android.widget.EditText</ID>
+    <ID>ForbiddenImport:Ingresos.kt$import android.widget.TextView</ID>
+    <ID>ForbiddenImport:Ingresos.kt$import android.widget.Toast</ID>
+    <ID>ForbiddenImport:Login.kt$import android.widget.Button</ID>
+    <ID>ForbiddenImport:Login.kt$import android.widget.TextView</ID>
+    <ID>ForbiddenImport:Perfil.kt$import android.view.View</ID>
+    <ID>ForbiddenImport:Perfil.kt$import android.widget.Button</ID>
+    <ID>ForbiddenImport:Perfil.kt$import android.widget.TextView</ID>
+    <ID>ForbiddenImport:Perfil.kt$import android.widget.Toast</ID>
+    <ID>ForbiddenImport:Registro.kt$import android.widget.Button</ID>
+    <ID>ForbiddenImport:Registro.kt$import android.widget.TextView</ID>
+    <ID>ForbiddenImport:Reporte.kt$import android.view.View</ID>
+    <ID>FunctionNaming:Theme.kt$@Composable fun CoinByCoinTheme( darkTheme: Boolean = isSystemInDarkTheme(), // Dynamic color is available on Android 12+ dynamicColor: Boolean = true, content: @Composable () -&gt; Unit )</ID>
+    <ID>FunctionReturnTypeSpacing:DAO.kt$GastoDao$@Query("SELECT * FROM Gasto WHERE idUsuario = :usuarioId AND categoria = :categoria AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')") fun getGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>FunctionReturnTypeSpacing:DAO.kt$GastoDao$@Query("SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId AND categoria = :categoria AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')") fun getValorGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;Double&gt;</ID>
+    <ID>FunctionReturnTypeSpacing:GastoRepository.kt$GastoRepository$fun getGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>FunctionReturnTypeSpacing:GastosViewModel.kt$GastosViewModel$fun getGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>FunctionReturnTypeSpacing:UsuarioRepository.kt$UsuarioRepository$fun getUltimoUsuarioId():LiveData&lt;Long&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:AppDatabase.kt$AppDatabase.Companion$fun getDatabase(context: Context): AppDatabase</ID>
+    <ID>FunctionStartOfBodySpacing:GastoRepository.kt$GastoRepository$fun deleteGasto(id: Long)</ID>
+    <ID>FunctionStartOfBodySpacing:GastoRepository.kt$GastoRepository$fun getGastosPorFechas(idUsuario: Long,fechaInf: String,fechaSup: String): LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:GastoRepository.kt$GastoRepository$fun insertGasto(gasto: Gasto)</ID>
+    <ID>FunctionStartOfBodySpacing:GastoRepository.kt$GastoRepository$fun modificarGasto(id: Long, categoria: String, valor: Double, descripcion: String, fecha: String)</ID>
+    <ID>FunctionStartOfBodySpacing:GastosViewModel.kt$GastosViewModel$fun deleteGasto(id: Long)</ID>
+    <ID>FunctionStartOfBodySpacing:GastosViewModel.kt$GastosViewModel$fun getDisponible(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:GastosViewModel.kt$GastosViewModel$fun getGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:GastosViewModel.kt$GastosViewModel$fun getGastosPorFechas(idUsuario: Long,fechaInf: String,fechaSup: String): LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:GastosViewModel.kt$GastosViewModel$fun getValorGastosMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:GastosViewModel.kt$GastosViewModel$fun getValorGastosMesCategoria(usuarioId: Long, categoria:String): LiveData&lt;Double&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:GastosViewModel.kt$GastosViewModel$fun modificarGasto(id: Long, categoria: String, valor: Double, descripcion: String, fecha: String)</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun desactivarIngPasado(descripcion: String)</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun eliminarIngreso(id:Long)</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun getIngCasDeEsteMes(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun getIngMesDeEsteMes(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun getIngTotalDeEsteMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun getIngresosMensuales(usuarioId: Long, anio: String, mes:String): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun modificarIngreso(fecha: String, valor: Double, id: Long)</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun truncarIngresos()</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$fun verificacion(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoRepository.kt$IngresoRepository$suspend fun insertIngreso(ingreso: Ingreso)</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoViewModel.kt$IngresoViewModel$fun desactivarIngPasado(descripcion:String)</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoViewModel.kt$IngresoViewModel$fun eliminarIngreso(id: Long)</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoViewModel.kt$IngresoViewModel$fun getAllIngresos(): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoViewModel.kt$IngresoViewModel$fun getIngTotalDeEsteMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoViewModel.kt$IngresoViewModel$fun getIngresosMensuales(usuarioId: Long, anio: String, mes:String): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoViewModel.kt$IngresoViewModel$fun modificarIngreso(fecha: String, valor:Double, id: Long)</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoViewModel.kt$IngresoViewModel$fun truncarIngresos()</ID>
+    <ID>FunctionStartOfBodySpacing:IngresoViewModel.kt$IngresoViewModel$fun verificacion(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun diaSemana(fecha: String): Float</ID>
+    <ID>FunctionStartOfBodySpacing:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun organizar(lista: List&lt;Pair&lt;String, Double&gt;&gt;): List&lt;Pair&lt;String, Double&gt;&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) private fun extraerMes(fecha: LocalDate): String</ID>
+    <ID>FunctionStartOfBodySpacing:Reporte.kt$Reporte$@SuppressLint("SetTextI18n") @RequiresApi(Build.VERSION_CODES.O) fun actualizarGrafico(fechaActual: LocalDate, tiempo: String)</ID>
+    <ID>FunctionStartOfBodySpacing:Reporte.kt$Reporte$fun diaAnio(fecha: String): Float</ID>
+    <ID>FunctionStartOfBodySpacing:Reporte.kt$Reporte$fun diaMes(fecha: String): Float</ID>
+    <ID>FunctionStartOfBodySpacing:Reporte.kt$Reporte$fun primerDiaMes(dia: Int): Boolean</ID>
+    <ID>FunctionStartOfBodySpacing:SharedViewModel.kt$SharedViewModel$fun setUsuarioId(data: Long)</ID>
+    <ID>FunctionStartOfBodySpacing:UsuarioRepository.kt$UsuarioRepository$fun cambiarContrasena(contrasena: String, usuarioId: Long)</ID>
+    <ID>FunctionStartOfBodySpacing:UsuarioRepository.kt$UsuarioRepository$fun eliminarUsuario(usuarioId: Long)</ID>
+    <ID>FunctionStartOfBodySpacing:UsuarioRepository.kt$UsuarioRepository$fun getUltimoUsuarioId():LiveData&lt;Long&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:UsuarioRepository.kt$UsuarioRepository$fun getUsuarioPorId(id: Long): LiveData&lt;Usuario&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:UsuarioRepository.kt$UsuarioRepository$fun getUsuarioPorUsuario(nombreUsuario: String): LiveData&lt;Usuario?&gt;</ID>
+    <ID>FunctionStartOfBodySpacing:UsuarioRepository.kt$UsuarioRepository$suspend fun insertUsuario(usuario: Usuario)</ID>
+    <ID>ImportOrdering:Entidades.kt$import androidx.room.Entity import androidx.room.PrimaryKey import androidx.room.ForeignKey import androidx.room.ForeignKey.Companion.CASCADE</ID>
+    <ID>ImportOrdering:ExampleUnitTest.kt$import org.junit.Test import org.junit.Assert.*</ID>
+    <ID>Indentation:Dashboard.kt$Dashboard$ </ID>
+    <ID>Indentation:Ingresos.kt$Ingresos$ </ID>
+    <ID>Indentation:MainActivity.kt$MainActivity$ </ID>
+    <ID>Indentation:Perfil.kt$Perfil$ </ID>
+    <ID>Indentation:Registro.kt$Registro$ </ID>
+    <ID>LargeClass:DashboardFragment.kt$DashboardFragment : FragmentOnItemClickListener</ID>
+    <ID>LargeClass:Reporte.kt$Reporte : Fragment</ID>
+    <ID>LateinitUsage:Dashboard.kt$Dashboard$private lateinit var appBarConfiguration: AppBarConfiguration</ID>
+    <ID>LateinitUsage:Dashboard.kt$Dashboard$private lateinit var binding: ActivityDashboardBinding</ID>
+    <ID>LateinitUsage:Dashboard.kt$Dashboard$private lateinit var usuarioViewModel: UsuarioViewModel</ID>
+    <ID>LateinitUsage:Ingresos.kt$Ingresos$private lateinit var ingresoViewModel: IngresoViewModel</ID>
+    <ID>LateinitUsage:Ingresos.kt$Ingresos$private lateinit var sharedViewModel: SharedViewModel</ID>
+    <ID>LateinitUsage:Login.kt$Login$private lateinit var usuarioViewModel: UsuarioViewModel</ID>
+    <ID>LateinitUsage:MyApp.kt$MyApp.Companion$lateinit var database: AppDatabase</ID>
+    <ID>LateinitUsage:Perfil.kt$Perfil$private lateinit var sharedViewModel: SharedViewModel</ID>
+    <ID>LateinitUsage:Perfil.kt$Perfil$private lateinit var usuarioViewModel: UsuarioViewModel</ID>
+    <ID>LateinitUsage:Registro.kt$Registro$private lateinit var usuarioViewModel: UsuarioViewModel</ID>
+    <ID>LateinitUsage:Reporte.kt$Reporte$lateinit var lineChartReporte: LineChartView</ID>
+    <ID>LateinitUsage:Reporte.kt$Reporte$private lateinit var gastosViewModel: GastosViewModel</ID>
+    <ID>LateinitUsage:Reporte.kt$Reporte$private lateinit var sharedViewModel: SharedViewModel</ID>
+    <ID>LongMethod:DashboardFragment.kt$DashboardFragment$@SuppressLint("SetTextI18n") private fun cargarDatos()</ID>
+    <ID>LongMethod:DashboardFragment.kt$DashboardFragment$override fun onItemClick(gasto: Gasto)</ID>
+    <ID>LongMethod:DashboardFragment.kt$DashboardFragment$override fun onViewCreated(view: View, savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:DashboardFragment.kt$DashboardFragment$private fun cargarDona()</ID>
+    <ID>LongMethod:Ingresos.kt$Ingresos$@RequiresApi(Build.VERSION_CODES.O) override fun onViewCreated(view: View, savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:Ingresos.kt$Ingresos$@SuppressLint("SetTextI18n") private fun cargarIngresos(ingresos: List&lt;Ingreso&gt;, contenedor: ViewGroup)</ID>
+    <ID>LongMethod:Perfil.kt$Perfil$override fun onViewCreated(view: View, savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun cargarGraficoLineasAn(chartView: LineChartView, datosPorCategoria: Map&lt;String, List&lt;Pair&lt;String, Double&gt;&gt;&gt;)</ID>
+    <ID>LongParameterList:DAO.kt$UsuarioDao$(usuarioId: Long, usuario: String, nombres: String, apellidos: String, documento: String, email: String, numeroTel: String)</ID>
+    <ID>LongParameterList:UsuarioRepository.kt$UsuarioRepository$(usuarioId: Long, usuario: String, nombres: String, apellidos: String, documento: String, email: String, numeroTel: String)</ID>
+    <ID>LongParameterList:UsuarioViewModel.kt$UsuarioViewModel$(usuarioId: Long, usuario: String, nombres: String, apellidos: String, documento: String, email: String, numeroTel: String)</ID>
+    <ID>MagicNumber:Color.kt$0xFF625b71</ID>
+    <ID>MagicNumber:Color.kt$0xFF6650a4</ID>
+    <ID>MagicNumber:Color.kt$0xFF7D5260</ID>
+    <ID>MagicNumber:Color.kt$0xFFCCC2DC</ID>
+    <ID>MagicNumber:Color.kt$0xFFD0BCFF</ID>
+    <ID>MagicNumber:Color.kt$0xFFEFB8C8</ID>
+    <ID>MagicNumber:DashboardFragment.kt$DashboardFragment$0.8f</ID>
+    <ID>MagicNumber:Registro.kt$Registro$2000L</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$10</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$1000</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$11</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$12</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$120</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$121</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$151</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$152</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$181</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$182</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$212</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$213</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$243</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$244</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$273</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$274</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$3</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$30</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$304</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$305</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$31</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$32</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$334</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$335</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$365</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$4</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$5</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$59</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$6</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$60</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$7</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$8</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$9</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$90</ID>
+    <ID>MagicNumber:Reporte.kt$Reporte$91</ID>
+    <ID>MatchingDeclarationName:customSpinnerAdapter.kt$CustomSpinnerAdapter : ArrayAdapter</ID>
+    <ID>MaxLineLength:DAO.kt$GastoDao$@Query("SELECT (SELECT SUM(valor) FROM Ingreso WHERE idUsuario = :usuarioId)-(SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId)")</ID>
+    <ID>MaxLineLength:DAO.kt$GastoDao$@Query("SELECT * FROM Gasto WHERE idUsuario = :idUsuario AND DATE(fecha) BETWEEN DATE(:fechaInf) AND DATE(:fechaSup)")</ID>
+    <ID>MaxLineLength:DAO.kt$GastoDao$@Query("SELECT * FROM Gasto WHERE idUsuario = :usuarioId AND categoria = :categoria AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')")</ID>
+    <ID>MaxLineLength:DAO.kt$GastoDao$@Query("SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')")</ID>
+    <ID>MaxLineLength:DAO.kt$GastoDao$@Query("SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId AND categoria = :categoria AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')")</ID>
+    <ID>MaxLineLength:DAO.kt$GastoDao$@Query("UPDATE gasto SET categoria = :categoria, valor = :valor, descripcion = :descripcion, fecha = :fecha WHERE id == :id")</ID>
+    <ID>MaxLineLength:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now') AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now') AND tipo = 'casual'")</ID>
+    <ID>MaxLineLength:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now') AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now') AND tipo = 'mensual'")</ID>
+    <ID>MaxLineLength:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND tipo = 'casual' AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')")</ID>
+    <ID>MaxLineLength:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND tipo = 'mensual' AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = :anio AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = :mes")</ID>
+    <ID>MaxLineLength:DAO.kt$IngresoDao$@Query("SELECT SUM(valor) FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')")</ID>
+    <ID>MaxLineLength:DAO.kt$UsuarioDao$@Query("UPDATE Usuario SET usuario = :usuario, nombres = :nombres, apellidos = :apellidos, documento = :documento, correo = :email, telefono = :numeroTel WHERE id = :usuarioId")</ID>
+    <ID>MaxLineLength:DAO.kt$UsuarioDao$fun</ID>
+    <ID>MaxLineLength:DashboardFragment.kt$DashboardFragment$Toast.makeText(requireContext(), "La cantidad ingresada no es válida", Toast.LENGTH_SHORT).show()</ID>
+    <ID>MaxLineLength:DashboardFragment.kt$DashboardFragment$Toast.makeText(requireContext(), "Por favor complete todos los campos", Toast.LENGTH_SHORT).show()</ID>
+    <ID>MaxLineLength:DashboardFragment.kt$DashboardFragment$if</ID>
+    <ID>MaxLineLength:DashboardFragment.kt$DashboardFragment$pieChartData.setCenterCircleScale(0.8f)</ID>
+    <ID>MaxLineLength:Entidades.kt$Gasto$@Entity(foreignKeys = [ForeignKey(entity = Usuario::class, parentColumns = ["id"], childColumns = ["idUsuario"], onDelete = CASCADE)])</ID>
+    <ID>MaxLineLength:Entidades.kt$Ingreso$@Entity(foreignKeys = [ForeignKey(entity = Usuario::class, parentColumns = ["id"], childColumns = ["idUsuario"], onDelete = CASCADE)])</ID>
+    <ID>MaxLineLength:GastoRepository.kt$GastoRepository$fun getGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>MaxLineLength:GastoRepository.kt$GastoRepository$fun getValorGastosMesCategoria(usuarioId: Long, categoria:String): LiveData&lt;Double&gt;</ID>
+    <ID>MaxLineLength:Ingresos.kt$Ingresos$// Verificar si la descripción del ingreso mensual del mes pasado ya está presente en el conjunto de descripciones actuales</ID>
+    <ID>MaxLineLength:Ingresos.kt$Ingresos$Log.d("FragmentIngresos", "creando ingreso mensual ${ingreso.descripcion} mes $monthString/$yearString")</ID>
+    <ID>MaxLineLength:Ingresos.kt$Ingresos$Toast.makeText(requireContext(), "Por favor, llene todos los campos", Toast.LENGTH_SHORT).show()</ID>
+    <ID>MaxLineLength:Ingresos.kt$Ingresos$ingresoViewModel.getIngresosMensuales(usuarioId, yearString, monthString)</ID>
+    <ID>MaxLineLength:Ingresos.kt$Ingresos$layoutParams = ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT)</ID>
+    <ID>MaxLineLength:Ingresos.kt$Ingresos$layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)</ID>
+    <ID>MaxLineLength:Ingresos.kt$Ingresos$override</ID>
+    <ID>MaxLineLength:Perfil.kt$Perfil$val regex = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%^&amp;*()_+\\-=\\[\\]{};':\"\\\\|,.&lt;&gt;/?]).{8,}\$")</ID>
+    <ID>MaxLineLength:Reporte.kt$Reporte$gastosViewModel.getGastosPorFechas(usuarioId, fechaInfFormateada, fechaSupFormateada)</ID>
+    <ID>MaxLineLength:Reporte.kt$Reporte$private</ID>
+    <ID>MaxLineLength:UsuarioRepository.kt$UsuarioRepository$fun</ID>
+    <ID>MaxLineLength:UsuarioRepository.kt$UsuarioRepository$usuarioDao.actualizarUsuario(usuarioId= usuarioId, usuario=usuario, nombres=nombres, apellidos=apellidos, documento=documento, email=email, numeroTel=numeroTel)</ID>
+    <ID>MaxLineLength:UsuarioViewModel.kt$UsuarioViewModel$fun</ID>
+    <ID>MaximumLineLength:DAO.kt$GastoDao$ </ID>
+    <ID>MaximumLineLength:DAO.kt$IngresoDao$ </ID>
+    <ID>MaximumLineLength:DAO.kt$UsuarioDao$ </ID>
+    <ID>MaximumLineLength:DashboardFragment.kt$DashboardFragment$ </ID>
+    <ID>MaximumLineLength:Entidades.kt$Gasto$@</ID>
+    <ID>MaximumLineLength:Entidades.kt$Ingreso$@</ID>
+    <ID>MaximumLineLength:GastoRepository.kt$GastoRepository$ </ID>
+    <ID>MaximumLineLength:Ingresos.kt$Ingresos$ </ID>
+    <ID>MaximumLineLength:Perfil.kt$Perfil$ </ID>
+    <ID>MaximumLineLength:Reporte.kt$Reporte$ </ID>
+    <ID>MaximumLineLength:UsuarioRepository.kt$UsuarioRepository$ </ID>
+    <ID>MaximumLineLength:UsuarioViewModel.kt$UsuarioViewModel$ </ID>
+    <ID>NestedBlockDepth:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun cargarGraficoLineasAn(chartView: LineChartView, datosPorCategoria: Map&lt;String, List&lt;Pair&lt;String, Double&gt;&gt;&gt;)</ID>
+    <ID>NestedBlockDepth:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun cargarGraficoLineasSem(chartView: LineChartView, datosPorCategoria: Map&lt;String, List&lt;Pair&lt;String, Double&gt;&gt;&gt;)</ID>
+    <ID>NestedBlockDepth:Reporte.kt$Reporte$fun isChartEmpty(lineChartView: LineChartView): Boolean</ID>
+    <ID>NewLineAtEndOfFile:Color.kt$com.example.MrFinancesApp.ui.theme.Color.kt</ID>
+    <ID>NewLineAtEndOfFile:DashboardFragment.kt$com.example.MrFinancesApp.DashboardFragment.kt</ID>
+    <ID>NewLineAtEndOfFile:ExampleUnitTest.kt$com.example.MrFinancesApp.ExampleUnitTest.kt</ID>
+    <ID>NewLineAtEndOfFile:GastosViewModel.kt$com.example.MrFinancesApp.GastosViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:IngresoRepository.kt$com.example.MrFinancesApp.IngresoRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:IngresoViewModel.kt$com.example.MrFinancesApp.IngresoViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:Login.kt$com.example.MrFinancesApp.Login.kt</ID>
+    <ID>NewLineAtEndOfFile:OnItemClickListener.kt$com.example.MrFinancesApp.OnItemClickListener.kt</ID>
+    <ID>NewLineAtEndOfFile:Perfil.kt$com.example.MrFinancesApp.Perfil.kt</ID>
+    <ID>NewLineAtEndOfFile:Reporte.kt$com.example.MrFinancesApp.Reporte.kt</ID>
+    <ID>NewLineAtEndOfFile:SharedViewModel.kt$com.example.MrFinancesApp.SharedViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:Theme.kt$com.example.MrFinancesApp.ui.theme.Theme.kt</ID>
+    <ID>NewLineAtEndOfFile:Type.kt$com.example.MrFinancesApp.ui.theme.Type.kt</ID>
+    <ID>NewLineAtEndOfFile:UsuarioViewModel.kt$com.example.MrFinancesApp.UsuarioViewModel.kt</ID>
+    <ID>NoBlankLineBeforeRbrace:AppDatabase.kt$AppDatabase$ </ID>
+    <ID>NoBlankLineBeforeRbrace:DAO.kt$IngresoDao$ </ID>
+    <ID>NoBlankLineBeforeRbrace:Dashboard.kt$Dashboard$ </ID>
+    <ID>NoBlankLineBeforeRbrace:DashboardFragment.kt$DashboardFragment$ </ID>
+    <ID>NoBlankLineBeforeRbrace:GastoAdapter.kt$GastoAdapter$ </ID>
+    <ID>NoBlankLineBeforeRbrace:Ingresos.kt$Ingresos$ </ID>
+    <ID>NoBlankLineBeforeRbrace:MainActivity.kt$MainActivity$ </ID>
+    <ID>NoBlankLineBeforeRbrace:Registro.kt$Registro$ </ID>
+    <ID>NoBlankLineBeforeRbrace:Reporte.kt$Reporte$ </ID>
+    <ID>NoBlankLineBeforeRbrace:UsuarioViewModel.kt$UsuarioViewModel$ </ID>
+    <ID>NoBlankLinesInChainedMethodCalls:DashboardFragment.kt$DashboardFragment$ </ID>
+    <ID>NoConsecutiveBlankLines:AppDatabase.kt$AppDatabase$ </ID>
+    <ID>NoConsecutiveBlankLines:DAO.kt$IngresoDao$ </ID>
+    <ID>NoConsecutiveBlankLines:Dashboard.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:DashboardFragment.kt$DashboardFragment$ </ID>
+    <ID>NoConsecutiveBlankLines:Entidades.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:GastoAdapter.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:GastoAdapter.kt$GastoAdapter$ </ID>
+    <ID>NoConsecutiveBlankLines:GastoRepository.kt$GastoRepository$ </ID>
+    <ID>NoConsecutiveBlankLines:GastosViewModel.kt$GastosViewModel$ </ID>
+    <ID>NoConsecutiveBlankLines:IngresoRepository.kt$IngresoRepository$ </ID>
+    <ID>NoConsecutiveBlankLines:Ingresos.kt$Ingresos$ </ID>
+    <ID>NoConsecutiveBlankLines:Perfil.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:Perfil.kt$Perfil$ </ID>
+    <ID>NoConsecutiveBlankLines:Registro.kt$Registro$ </ID>
+    <ID>NoConsecutiveBlankLines:Reporte.kt$Reporte$ </ID>
+    <ID>NoConsecutiveBlankLines:UsuarioRepository.kt$UsuarioRepository$ </ID>
+    <ID>NoConsecutiveBlankLines:UsuarioViewModel.kt$UsuarioViewModel$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:DashboardFragment.kt$DashboardFragment$ </ID>
+    <ID>NoMultipleSpaces:GastosViewModel.kt$GastosViewModel$ </ID>
+    <ID>NoMultipleSpaces:Reporte.kt$Reporte$ </ID>
+    <ID>NoWildcardImports:DashboardFragment.kt$import lecho.lib.hellocharts.model.*</ID>
+    <ID>NoWildcardImports:ExampleUnitTest.kt$import org.junit.Assert.*</ID>
+    <ID>PackageName:AppDatabase.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Color.kt$package com.example.MrFinancesApp.ui.theme</ID>
+    <ID>PackageName:DAO.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Dashboard.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:DashboardFragment.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Entidades.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:ExampleUnitTest.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:GastoAdapter.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:GastoRepository.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:GastosViewModel.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:IngresoRepository.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:IngresoViewModel.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Ingresos.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:IngresosListener.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Login.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:MainActivity.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:MyApp.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:OnItemClickListener.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Perfil.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Registro.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Reporte.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:SharedViewModel.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:Theme.kt$package com.example.MrFinancesApp.ui.theme</ID>
+    <ID>PackageName:Type.kt$package com.example.MrFinancesApp.ui.theme</ID>
+    <ID>PackageName:UsuarioRepository.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:UsuarioViewModel.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageName:customSpinnerAdapter.kt$package com.example.MrFinancesApp.ui.theme</ID>
+    <ID>PackageNaming:AppDatabase.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Color.kt$package com.example.MrFinancesApp.ui.theme</ID>
+    <ID>PackageNaming:DAO.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Dashboard.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:DashboardFragment.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Entidades.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:ExampleUnitTest.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:GastoAdapter.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:GastoRepository.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:GastosViewModel.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:IngresoRepository.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:IngresoViewModel.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Ingresos.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:IngresosListener.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Login.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:MainActivity.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:MyApp.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:OnItemClickListener.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Perfil.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Registro.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Reporte.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:SharedViewModel.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:Theme.kt$package com.example.MrFinancesApp.ui.theme</ID>
+    <ID>PackageNaming:Type.kt$package com.example.MrFinancesApp.ui.theme</ID>
+    <ID>PackageNaming:UsuarioRepository.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:UsuarioViewModel.kt$package com.example.MrFinancesApp</ID>
+    <ID>PackageNaming:customSpinnerAdapter.kt$package com.example.MrFinancesApp.ui.theme</ID>
+    <ID>ParameterListWrapping:DAO.kt$UsuarioDao$(usuarioId: Long, usuario: String, nombres: String, apellidos: String, documento: String, email: String, numeroTel: String)</ID>
+    <ID>ParameterListWrapping:Ingresos.kt$Ingresos$(totalIngresos: Double, ingresosMensuales: List&lt;Ingreso&gt;, ingresosCasuales: List&lt;Ingreso&gt;)</ID>
+    <ID>PropertyWrapping:Perfil.kt$Perfil$val regex = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%^&amp;*()_+\\-=\\[\\]{};':\"\\\\|,.&lt;&gt;/?]).{8,}\$")</ID>
+    <ID>SpacingAroundColon:AppDatabase.kt$AppDatabase.Companion$:</ID>
+    <ID>SpacingAroundColon:DAO.kt$GastoDao$:</ID>
+    <ID>SpacingAroundColon:DAO.kt$IngresoDao$:</ID>
+    <ID>SpacingAroundColon:GastoRepository.kt$GastoRepository$:</ID>
+    <ID>SpacingAroundColon:GastosViewModel.kt$GastosViewModel$:</ID>
+    <ID>SpacingAroundColon:IngresoRepository.kt$IngresoRepository$:</ID>
+    <ID>SpacingAroundColon:IngresoViewModel.kt$IngresoViewModel$:</ID>
+    <ID>SpacingAroundColon:Ingresos.kt$Ingresos$:</ID>
+    <ID>SpacingAroundColon:SharedViewModel.kt$SharedViewModel$:</ID>
+    <ID>SpacingAroundColon:UsuarioRepository.kt$UsuarioRepository$:</ID>
+    <ID>SpacingAroundComma:Dashboard.kt$Dashboard$,</ID>
+    <ID>SpacingAroundComma:GastoRepository.kt$GastoRepository$,</ID>
+    <ID>SpacingAroundComma:GastosViewModel.kt$GastosViewModel$,</ID>
+    <ID>SpacingAroundComma:IngresoRepository.kt$IngresoRepository$,</ID>
+    <ID>SpacingAroundComma:Registro.kt$Registro$,</ID>
+    <ID>SpacingAroundComma:Reporte.kt$Reporte$,</ID>
+    <ID>SpacingAroundComma:UsuarioViewModel.kt$UsuarioViewModel$,</ID>
+    <ID>SpacingAroundCurly:AppDatabase.kt$AppDatabase.Companion${</ID>
+    <ID>SpacingAroundCurly:GastoRepository.kt$GastoRepository${</ID>
+    <ID>SpacingAroundCurly:GastosViewModel.kt$GastosViewModel${</ID>
+    <ID>SpacingAroundCurly:IngresoRepository.kt$IngresoRepository${</ID>
+    <ID>SpacingAroundCurly:IngresoViewModel.kt$IngresoViewModel${</ID>
+    <ID>SpacingAroundCurly:Ingresos.kt$Ingresos${</ID>
+    <ID>SpacingAroundCurly:Registro.kt$Registro${</ID>
+    <ID>SpacingAroundCurly:Reporte.kt$Reporte${</ID>
+    <ID>SpacingAroundCurly:Reporte.kt$Reporte$}</ID>
+    <ID>SpacingAroundCurly:SharedViewModel.kt$SharedViewModel${</ID>
+    <ID>SpacingAroundCurly:UsuarioRepository.kt$UsuarioRepository${</ID>
+    <ID>SpacingAroundKeyword:AppDatabase.kt$AppDatabase.Companion$if</ID>
+    <ID>SpacingAroundKeyword:DashboardFragment.kt$DashboardFragment$if</ID>
+    <ID>SpacingAroundKeyword:Reporte.kt$Reporte$if</ID>
+    <ID>SpacingAroundKeyword:Reporte.kt$Reporte$when</ID>
+    <ID>SpacingAroundOperators:DashboardFragment.kt$DashboardFragment$*</ID>
+    <ID>SpacingAroundOperators:DashboardFragment.kt$DashboardFragment$+</ID>
+    <ID>SpacingAroundOperators:DashboardFragment.kt$DashboardFragment$/</ID>
+    <ID>SpacingAroundOperators:Ingresos.kt$Ingresos$=</ID>
+    <ID>SpacingAroundOperators:Reporte.kt$Reporte$-&gt;</ID>
+    <ID>SpacingAroundOperators:Reporte.kt$Reporte$/</ID>
+    <ID>SpacingAroundOperators:Reporte.kt$Reporte$=</ID>
+    <ID>SpacingAroundOperators:UsuarioRepository.kt$UsuarioRepository$=</ID>
+    <ID>SpacingAroundParens:DashboardFragment.kt$DashboardFragment$(</ID>
+    <ID>SpacingBetweenDeclarationsWithAnnotations:Entidades.kt$Usuario</ID>
+    <ID>StringTemplate:DashboardFragment.kt$DashboardFragment$${anio}</ID>
+    <ID>StringTemplate:DashboardFragment.kt$DashboardFragment$${dia}</ID>
+    <ID>StringTemplate:DashboardFragment.kt$DashboardFragment$${mes}</ID>
+    <ID>StringTemplate:Ingresos.kt$Ingresos$${anio}</ID>
+    <ID>StringTemplate:Ingresos.kt$Ingresos$${dia}</ID>
+    <ID>StringTemplate:Ingresos.kt$Ingresos$${mes}</ID>
+    <ID>TooManyFunctions:DAO.kt$IngresoDao</ID>
+    <ID>TooManyFunctions:Reporte.kt$Reporte : Fragment</ID>
+    <ID>UndocumentedPublicClass:AppDatabase.kt$AppDatabase : RoomDatabase</ID>
+    <ID>UndocumentedPublicClass:AppDatabase.kt$AppDatabase$Companion</ID>
+    <ID>UndocumentedPublicClass:DAO.kt$GastoDao</ID>
+    <ID>UndocumentedPublicClass:DAO.kt$IngresoDao</ID>
+    <ID>UndocumentedPublicClass:DAO.kt$UsuarioDao</ID>
+    <ID>UndocumentedPublicClass:Dashboard.kt$Dashboard : AppCompatActivity</ID>
+    <ID>UndocumentedPublicClass:DashboardFragment.kt$DashboardFragment : FragmentOnItemClickListener</ID>
+    <ID>UndocumentedPublicClass:Entidades.kt$FechaYAnio</ID>
+    <ID>UndocumentedPublicClass:Entidades.kt$Gasto</ID>
+    <ID>UndocumentedPublicClass:Entidades.kt$Ingreso</ID>
+    <ID>UndocumentedPublicClass:Entidades.kt$Usuario</ID>
+    <ID>UndocumentedPublicClass:GastoAdapter.kt$GastoAdapter : Adapter</ID>
+    <ID>UndocumentedPublicClass:GastoAdapter.kt$GastoAdapter$GastoViewHolder : ViewHolder</ID>
+    <ID>UndocumentedPublicClass:GastoRepository.kt$GastoRepository</ID>
+    <ID>UndocumentedPublicClass:GastosViewModel.kt$GastosViewModel : AndroidViewModel</ID>
+    <ID>UndocumentedPublicClass:IngresoRepository.kt$IngresoRepository</ID>
+    <ID>UndocumentedPublicClass:IngresoViewModel.kt$IngresoViewModel : AndroidViewModel</ID>
+    <ID>UndocumentedPublicClass:Ingresos.kt$Ingresos : FragmentIngresosListener</ID>
+    <ID>UndocumentedPublicClass:IngresosListener.kt$IngresosListener</ID>
+    <ID>UndocumentedPublicClass:Login.kt$Login : AppCompatActivity</ID>
+    <ID>UndocumentedPublicClass:MainActivity.kt$MainActivity : ComponentActivity</ID>
+    <ID>UndocumentedPublicClass:MyApp.kt$MyApp : Application</ID>
+    <ID>UndocumentedPublicClass:MyApp.kt$MyApp$Companion</ID>
+    <ID>UndocumentedPublicClass:OnItemClickListener.kt$OnItemClickListener</ID>
+    <ID>UndocumentedPublicClass:Perfil.kt$Perfil : Fragment</ID>
+    <ID>UndocumentedPublicClass:Registro.kt$Registro : AppCompatActivity</ID>
+    <ID>UndocumentedPublicClass:Reporte.kt$Reporte : Fragment</ID>
+    <ID>UndocumentedPublicClass:SharedViewModel.kt$SharedViewModel : ViewModel</ID>
+    <ID>UndocumentedPublicClass:UsuarioRepository.kt$UsuarioRepository</ID>
+    <ID>UndocumentedPublicClass:UsuarioViewModel.kt$UsuarioViewModel : AndroidViewModel</ID>
+    <ID>UndocumentedPublicClass:customSpinnerAdapter.kt$CustomSpinnerAdapter : ArrayAdapter</ID>
+    <ID>UndocumentedPublicFunction:AppDatabase.kt$AppDatabase$abstract fun gastoDao(): GastoDao</ID>
+    <ID>UndocumentedPublicFunction:AppDatabase.kt$AppDatabase$abstract fun ingresoDao(): IngresoDao</ID>
+    <ID>UndocumentedPublicFunction:AppDatabase.kt$AppDatabase$abstract fun usuarioDao(): UsuarioDao</ID>
+    <ID>UndocumentedPublicFunction:AppDatabase.kt$AppDatabase.Companion$fun getDatabase(context: Context): AppDatabase</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Insert fun insert(gasto: Gasto)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Query("DELETE FROM Gasto WHERE id = :id") fun deleteGasto(id: Long)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Query("SELECT (SELECT SUM(valor) FROM Ingreso WHERE idUsuario = :usuarioId)-(SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId)") fun getDisponible(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Query("SELECT * FROM Gasto WHERE idUsuario = :idUsuario AND DATE(fecha) BETWEEN DATE(:fechaInf) AND DATE(:fechaSup)") fun getGastosPorFechas(idUsuario: Long, fechaInf: String, fechaSup: String): LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Query("SELECT * FROM Gasto WHERE idUsuario = :usuarioId AND categoria = :categoria AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')") fun getGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Query("SELECT * FROM Gasto") fun getAll(): LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Query("SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')") fun getValorGastosMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Query("SELECT SUM(valor) FROM Gasto WHERE idUsuario = :usuarioId AND categoria = :categoria AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')") fun getValorGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$GastoDao$@Query("UPDATE gasto SET categoria = :categoria, valor = :valor, descripcion = :descripcion, fecha = :fecha WHERE id == :id") fun modificarGasto(id: Long, categoria: String, valor: Double, descripcion: String, fecha: String)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Insert fun insert(ingreso: Ingreso)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("DELETE FROM Ingreso WHERE id = :id") fun eliminarIngreso(id: Long)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("DELETE FROM Ingreso") fun truncarIngresos()</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now') AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now') AND tipo = 'casual'") fun getIngCasDeEsteMes(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now') AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now') AND tipo = 'mensual'") fun getIngMesDeEsteMes(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND tipo = 'casual' AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')") fun verificacion(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso WHERE idUsuario = :usuarioId AND tipo = 'mensual' AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = :anio AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = :mes") fun getIngresosMensuales(usuarioId: Long, anio: String, mes: String): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("SELECT * FROM Ingreso") fun getAll(): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("SELECT SUM(valor) FROM Ingreso WHERE idUsuario = :usuarioId AND SUBSTR(fecha, 1, INSTR(fecha, '-') - 1) = strftime('%Y', 'now')AND SUBSTR(fecha, INSTR(fecha, '-') + 1, 2) = strftime('%m', 'now')") fun getIngTotalDeEsteMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("UPDATE Ingreso SET fecha = :fecha, valor = :valor WHERE id = :id ") fun modificarIngreso(fecha:String, valor:Double, id:Long)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$IngresoDao$@Query("UPDATE Ingreso set tipo = 'mensual Inactivo' WHERE descripcion = :descripcion") fun desactivarIngPasado(descripcion: String)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$UsuarioDao$@Insert(onConflict = OnConflictStrategy.REPLACE) suspend fun insert(usuario: Usuario)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$UsuarioDao$@Query("DELETE FROM Usuario WHERE id = :usuarioId") fun eliminarUsuario(usuarioId: Long)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$UsuarioDao$@Query("SELECT * FROM Usuario WHERE id = :usuarioId") fun getUsuarioPorId(usuarioId: Long): LiveData&lt;Usuario&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$UsuarioDao$@Query("SELECT * FROM Usuario") fun getAll(): LiveData&lt;List&lt;Usuario&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$UsuarioDao$@Query("SELECT * FROM usuario WHERE usuario = :nombreUsuario") fun getUsuarioPorUsuario(nombreUsuario: String): LiveData&lt;Usuario?&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$UsuarioDao$@Query("SELECT id FROM Usuario ORDER BY id DESC LIMIT 1") fun getUltimoUsuarioId(): LiveData&lt;Long&gt;</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$UsuarioDao$@Query("UPDATE Usuario SET contrasena = :contrasena WHERE ID = :usuarioId") fun cambiarContrasena(contrasena: String, usuarioId: Long)</ID>
+    <ID>UndocumentedPublicFunction:DAO.kt$UsuarioDao$@Query("UPDATE Usuario SET usuario = :usuario, nombres = :nombres, apellidos = :apellidos, documento = :documento, correo = :email, telefono = :numeroTel WHERE id = :usuarioId") fun actualizarUsuario(usuarioId: Long, usuario: String, nombres: String, apellidos: String, documento: String, email: String, numeroTel: String)</ID>
+    <ID>UndocumentedPublicFunction:DashboardFragment.kt$DashboardFragment$fun cargarBarra(cantidad: Double, barra: View)</ID>
+    <ID>UndocumentedPublicFunction:DashboardFragment.kt$DashboardFragment$fun cargarBarraDisp(cantidad: Double, barra: View)</ID>
+    <ID>UndocumentedPublicFunction:DashboardFragment.kt$DashboardFragment$fun obtenerColorCategoria(categoria: String): Int</ID>
+    <ID>UndocumentedPublicFunction:GastoAdapter.kt$GastoAdapter$fun setOnItemClickListener(listener: OnItemClickListener)</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun deleteGasto(id: Long)</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun getAllGastos(): LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun getDisponible(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun getGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun getGastosPorFechas(idUsuario: Long,fechaInf: String,fechaSup: String): LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun getValorGastosMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun getValorGastosMesCategoria(usuarioId: Long, categoria:String): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun insertGasto(gasto: Gasto)</ID>
+    <ID>UndocumentedPublicFunction:GastoRepository.kt$GastoRepository$fun modificarGasto(id: Long, categoria: String, valor: Double, descripcion: String, fecha: String)</ID>
+    <ID>UndocumentedPublicFunction:GastosViewModel.kt$GastosViewModel$fun deleteGasto(id: Long)</ID>
+    <ID>UndocumentedPublicFunction:GastosViewModel.kt$GastosViewModel$fun getDisponible(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastosViewModel.kt$GastosViewModel$fun getGastosMesCategoria(usuarioId: Long, categoria: String):LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastosViewModel.kt$GastosViewModel$fun getGastosPorFechas(idUsuario: Long,fechaInf: String,fechaSup: String): LiveData&lt;List&lt;Gasto&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastosViewModel.kt$GastosViewModel$fun getValorGastosMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastosViewModel.kt$GastosViewModel$fun getValorGastosMesCategoria(usuarioId: Long, categoria:String): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:GastosViewModel.kt$GastosViewModel$fun insertGasto(gasto: Gasto)</ID>
+    <ID>UndocumentedPublicFunction:GastosViewModel.kt$GastosViewModel$fun modificarGasto(id: Long, categoria: String, valor: Double, descripcion: String, fecha: String)</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun desactivarIngPasado(descripcion: String)</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun eliminarIngreso(id:Long)</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun getAllIngresos(): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun getIngCasDeEsteMes(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun getIngMesDeEsteMes(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun getIngTotalDeEsteMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun getIngresosMensuales(usuarioId: Long, anio: String, mes:String): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun modificarIngreso(fecha: String, valor: Double, id: Long)</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun truncarIngresos()</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$fun verificacion(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoRepository.kt$IngresoRepository$suspend fun insertIngreso(ingreso: Ingreso)</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun desactivarIngPasado(descripcion:String)</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun eliminarIngreso(id: Long)</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun getAllIngresos(): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun getIngCasDeEsteMes(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun getIngMesDeEsteMes(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun getIngTotalDeEsteMes(usuarioId: Long): LiveData&lt;Double&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun getIngresosMensuales(usuarioId: Long, anio: String, mes:String): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun insertIngreso(ingreso: Ingreso)</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun modificarIngreso(fecha: String, valor:Double, id: Long)</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun truncarIngresos()</ID>
+    <ID>UndocumentedPublicFunction:IngresoViewModel.kt$IngresoViewModel$fun verificacion(usuarioId: Long): LiveData&lt;List&lt;Ingreso&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:Ingresos.kt$Ingresos$@RequiresApi(Build.VERSION_CODES.O) fun verificarIngresosMensuales(ingresosMesActual: List&lt;Ingreso&gt;)</ID>
+    <ID>UndocumentedPublicFunction:IngresosListener.kt$IngresosListener$fun onIngresosCargados(totalIngresos: Double, ingresosMensuales: List&lt;Ingreso&gt;, ingresosCasuales: List&lt;Ingreso&gt;)</ID>
+    <ID>UndocumentedPublicFunction:OnItemClickListener.kt$OnItemClickListener$fun onItemClick(gasto: Gasto)</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun cargarGraficoLineasAn(chartView: LineChartView, datosPorCategoria: Map&lt;String, List&lt;Pair&lt;String, Double&gt;&gt;&gt;)</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun cargarGraficoLineasMes(chartView: LineChartView, datosPorCategoria: Map&lt;String, List&lt;Pair&lt;String, Double&gt;&gt;&gt;)</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun cargarGraficoLineasSem(chartView: LineChartView, datosPorCategoria: Map&lt;String, List&lt;Pair&lt;String, Double&gt;&gt;&gt;)</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun diaSemana(fecha: String): Float</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun generarPuntosAn(datos: List&lt;Pair&lt;String, Double&gt;&gt;): MutableList&lt;PointValue&gt;</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun generarPuntosMes(datos: List&lt;Pair&lt;String, Double&gt;&gt;): MutableList&lt;PointValue&gt;</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun generarPuntosSem(datos: List&lt;Pair&lt;String, Double&gt;&gt;): MutableList&lt;PointValue&gt;</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun organizar(lista: List&lt;Pair&lt;String, Double&gt;&gt;): List&lt;Pair&lt;String, Double&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@RequiresApi(Build.VERSION_CODES.O) fun periodoDeTiempo(tiempo: String, fechaActual: LocalDate): Pair&lt;LocalDate, LocalDate&gt;</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$@SuppressLint("SetTextI18n") @RequiresApi(Build.VERSION_CODES.O) fun actualizarGrafico(fechaActual: LocalDate, tiempo: String)</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$fun diaAnio(fecha: String): Float</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$fun diaMes(fecha: String): Float</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$fun getColorCategoria(categoria: String): Int</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$fun isChartEmpty(lineChartView: LineChartView): Boolean</ID>
+    <ID>UndocumentedPublicFunction:Reporte.kt$Reporte$fun primerDiaMes(dia: Int): Boolean</ID>
+    <ID>UndocumentedPublicFunction:SharedViewModel.kt$SharedViewModel$fun getUsuarioId(): Any</ID>
+    <ID>UndocumentedPublicFunction:SharedViewModel.kt$SharedViewModel$fun setUsuarioId(data: Long)</ID>
+    <ID>UndocumentedPublicFunction:Theme.kt$@Composable fun CoinByCoinTheme( darkTheme: Boolean = isSystemInDarkTheme(), // Dynamic color is available on Android 12+ dynamicColor: Boolean = true, content: @Composable () -&gt; Unit )</ID>
+    <ID>UndocumentedPublicFunction:UsuarioRepository.kt$UsuarioRepository$fun actualizarUsuario(usuarioId: Long, usuario: String, nombres: String, apellidos: String, documento: String, email: String, numeroTel: String)</ID>
+    <ID>UndocumentedPublicFunction:UsuarioRepository.kt$UsuarioRepository$fun cambiarContrasena(contrasena: String, usuarioId: Long)</ID>
+    <ID>UndocumentedPublicFunction:UsuarioRepository.kt$UsuarioRepository$fun eliminarUsuario(usuarioId: Long)</ID>
+    <ID>UndocumentedPublicFunction:UsuarioRepository.kt$UsuarioRepository$fun getAllUsuarios(): LiveData&lt;List&lt;Usuario&gt;&gt;</ID>
+    <ID>UndocumentedPublicFunction:UsuarioRepository.kt$UsuarioRepository$fun getUltimoUsuarioId():LiveData&lt;Long&gt;</ID>
+    <ID>UndocumentedPublicFunction:UsuarioRepository.kt$UsuarioRepository$fun getUsuarioPorId(id: Long): LiveData&lt;Usuario&gt;</ID>
+    <ID>UndocumentedPublicFunction:UsuarioRepository.kt$UsuarioRepository$fun getUsuarioPorUsuario(nombreUsuario: String): LiveData&lt;Usuario?&gt;</ID>
+    <ID>UndocumentedPublicFunction:UsuarioRepository.kt$UsuarioRepository$suspend fun insertUsuario(usuario: Usuario)</ID>
+    <ID>UndocumentedPublicFunction:UsuarioViewModel.kt$UsuarioViewModel$fun actualizarUsuario(usuarioId: Long, usuario: String, nombres: String, apellidos: String, documento: String, email: String, numeroTel: String)</ID>
+    <ID>UndocumentedPublicFunction:UsuarioViewModel.kt$UsuarioViewModel$fun cambiarContrasena(contrasena: String, usuarioId: Long)</ID>
+    <ID>UndocumentedPublicFunction:UsuarioViewModel.kt$UsuarioViewModel$fun eliminarUsuario(usuarioId: Long)</ID>
+    <ID>UndocumentedPublicFunction:UsuarioViewModel.kt$UsuarioViewModel$fun getUltimoUsuarioId(): LiveData&lt;Long&gt;</ID>
+    <ID>UndocumentedPublicFunction:UsuarioViewModel.kt$UsuarioViewModel$fun getUsuarioPorId(id: Long): LiveData&lt;Usuario&gt;</ID>
+    <ID>UndocumentedPublicFunction:UsuarioViewModel.kt$UsuarioViewModel$fun getUsuarioPorUsuario(nombreUsuario: String): LiveData&lt;Usuario?&gt;</ID>
+    <ID>UndocumentedPublicFunction:UsuarioViewModel.kt$UsuarioViewModel$fun insertUsuario(usuario: Usuario)</ID>
+    <ID>VariableNaming:DashboardFragment.kt$DashboardFragment$val AlimentosTextView = binding.cantidadAlimentos</ID>
+    <ID>VariableNaming:DashboardFragment.kt$DashboardFragment$val MercadoTextView = binding.cantidadMercado</ID>
+    <ID>VariableNaming:DashboardFragment.kt$DashboardFragment$val ServiciosTextView = binding.cantidadServicios</ID>
+    <ID>VariableNaming:DashboardFragment.kt$DashboardFragment$val TransporteTextView = binding.cantidadTransporte</ID>
+    <ID>WildcardImport:DashboardFragment.kt$import lecho.lib.hellocharts.model.*</ID>
+    <ID>WildcardImport:ExampleUnitTest.kt$import org.junit.Assert.*</ID>
+    <ID>Wrapping:Dashboard.kt$Dashboard$(</ID>
+    <ID>Wrapping:Dashboard.kt$Dashboard$(setOf( R.id.nav_dashboard, R.id.nav_perfil, R.id.nav_ingresos, R.id.nav_reporte), drawerLayout )</ID>
+    <ID>Wrapping:Ingresos.kt$Ingresos$(</ID>
+    <ID>Wrapping:Perfil.kt$Perfil$(</ID>
+    <ID>Wrapping:Reporte.kt$Reporte$(</ID>
+  </CurrentIssues>
+</SmellBaseline>
